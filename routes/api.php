@@ -1,8 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlunoController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/alunos', [AlunoController::class, 'index']);
-Route::post('/alunos', [AlunoController::class, 'store']);
-Route::delete('/alunos/{id}', [AlunoController::class, 'destroy']);
+Route::apiResource('alunos', AlunoController::class);
